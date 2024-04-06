@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Trail Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='optionsBar.css') }}">
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </nav>
+    <!-- Open button -->
+    <button onclick="openNav()">Open Sidebar</button>
+    <!-- Content -->
+    <div class="content">
+        <div class="container" id="container">
+            <div class="posts-container" id="posts-container">
+                <!-- Display posting info here -->
+            </div>
+        </div>
+    </div>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <!-- close button -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Filter Posts</a>
+        <a href="#" onclick="togglePostBox()">Add Post</a>
+         <!-- Posting box -->
+        <div class="posting-box" id="posting-box">
+            <textarea id="post-input" placeholder="Enter the trail name here"></textarea>
+            <button onclick="post()">Post</button>
+        </div>
+    </div>
+    
+
+    <!-- Script tag for script.js -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

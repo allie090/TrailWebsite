@@ -1,0 +1,26 @@
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Trail Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='optionsBar.css') }}">
+
+</head>
+<body>
+    <div class="bg-img"></div>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </nav>
+    <div class="text">
+        <h1>About the site</h1>
+        <p>Hi, my name is Allie. I am someone who loves hiking and planning outdoor adventures.
+            This website aims to be a personal solution to cataloging hikes that I have been on 
+            and ones that I would like do go on in the future.
+        </p>
+    </div>
+</body>
+{% endblock %}

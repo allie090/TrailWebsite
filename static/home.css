@@ -1,0 +1,78 @@
+
+body { 
+    background-color: rgb(52, 51, 51); 
+}
+
+.container { 
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-start; 
+    padding: 20px; 
+    transition: margin-left .5s; 
+}
+
+.posting-box { 
+    margin-right: 20px; 
+    display: none; 
+}
+
+.posting-box textarea { 
+    width: 300px; 
+    height: 100px; 
+    resize: none; 
+    margin-bottom: 10px; 
+}
+
+.posts-container { 
+    width: 300px; 
+}
+
+.post { 
+    background-color: #f0f0f0; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+}
+
+.sidebar { 
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0; 
+    background-color: rgb(95, 95, 95);  
+    overflow-x: hidden; 
+    padding-top: 60px; 
+    transition: 0.5s; 
+}
+
+.sidebar a { 
+    padding: 8px 8px; 
+    font-size: 25px; 
+    color: white; 
+    display: block; 
+    transition: 0.3s;
+}
+
+.sidebar a:hover { 
+    color: rgb(85, 85, 85); 
+}
+
+.sidebar .closebtn { 
+    position: absolute; 
+    top: 0; 
+    right: 25px; 
+    font-size: 36px; 
+    margin-left: 50px; 
+}
+
+.sidebar button { 
+    display: block; 
+    margin: 10px auto; 
+}
+
+.container { 
+    margin-left: 25%; 
+    padding: 16px; 
+    height: 100px; 
+}
