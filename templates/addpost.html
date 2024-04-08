@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trail Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='addpost.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='optionsBar.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/addpost">Add Post</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </nav>
+    <form action="/add_post" method="post">
+        <textarea name="trail_name" id="post-input" placeholder="Enter the trail name here"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

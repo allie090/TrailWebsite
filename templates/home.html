@@ -6,38 +6,45 @@
     <title>My Trail Website</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='optionsBar.css') }}">
-
 </head>
 <body>
     <nav>
         <ul>
             <li><a href="/">Home</a></li>
+            <li><a href="/addpost">Add Post</a></li> <!-- Corrected href attribute -->
             <li><a href="/about">About</a></li>
         </ul>
     </nav>
-    <!-- Open button -->
+
+    <!-- Open button for sidebar -->
     <button onclick="openNav()">Open Sidebar</button>
-    <!-- Content -->
+
+    <!-- General content -->
     <div class="content">
         <div class="container" id="container">
             <div class="posts-container" id="posts-container">
-                <!-- Display posting info here -->
+                <!-- Dynamic content: Display posting information here -->
+                {% for post in posts %}
+                <button class="post-button" onclick="handleButtonClick('{{ post }}')">{{ post }}</button>
+                {% endfor %}
             </div>
         </div>
     </div>
+
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
-        <!-- close button -->
+        <!-- Close button for sidebar -->
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <!-- Sidebar options -->
         <a href="#">Filter Posts</a>
-        <a href="#" onclick="togglePostBox()">Add Post</a>
-         <!-- Posting box -->
+        <a href="/addpost">Add Post</a> <!-- Corrected href attribute -->
+
+        <!-- Posting box -->
         <div class="posting-box" id="posting-box">
-            <textarea id="post-input" placeholder="Enter the trail name here"></textarea>
-            <button onclick="post()">Post</button>
+            <form action="/addpost" method="post"></form>
         </div>
     </div>
-    
 
     <!-- Script tag for script.js -->
     <script src="{{ url_for('static', filename='script.js') }}"></script>
